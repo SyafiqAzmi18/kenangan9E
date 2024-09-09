@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenangan Ceria 9E</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>✨ Kenangan Ceria 9E ✨</h1>
+    </header>
+    <main>
+        <div class="memory-container">
+            <div class="memory-card">
+                <img src="/Foto/Fotbar1.jpeg" alt="Foto kelas">
+                <h3>Foto Kelas saat kelas 8</h3>
+                <p>Foto saat kelas 8 bersama guru kita yang kita hormati pada kelas 8</p>
+            </div>
+            <div class="memory-card">
+                <img src="/Foto/bukber.jpeg" alt="Bukber Sekelas">
+                <h3>Bukber Sekelas</h3>
+                <p>Buka Bersama di rumah teman, meskipun tidak semuanya mengikuti bukber ini tetapi kebersamaan dan tertawa lah yang membuat kita bahagia</p>
+            </div>
+            <div class="memory-card">
+                <img src="/Foto/Renang1.jpeg" alt="Renang Kelas">
+                <h3>Foto terakhir sesudah renang</h3>
+                <p>Fotbar terakhir ketika renang, menjadi salah satu kenangan yang membuat kita kangen renang bersama dan belajar bersama.</p>
+            </div>
+            <div class="memory-card">
+                <img src="/Foto/pensi.jpeg" alt="Pentas Seni">
+                <h3>Pentas Seni Awal dan Akhir</h3>
+                <p>Latihan beberapa bulan, dan hasilnya sangat memuaskan meskipun disaat latihan pada karabur, tetapi dengan kerja sama dan konsisten membuahkan hasil yang lebih dari puas</p>
+            </div>
+            <div class="memory-card">
+                <img src="/Foto/fototerakhir1.jpeg" alt="Fotbar terakhir">
+                <h3>Foto terakhir</h3>
+                <p>bertahun tahun kita bersama telah banyak hal yang kita alami dan banyak hal hal konyol yang sudah ditertawai, dan ini adalah foto terakhir kita saat pengambilan ijazah di 39.</p>
+            </div>
+            <div class="memory-card">
+                <img src="/Foto/bufitri.jpeg" alt="Guru Kita Tersayang">
+                <h3>Guru Kita tersayang</h3>
+                <p>Nama beliau Bu Fitri, ini adalah guru tersayang kita yang sangat kita hormati dan kita sayangi, selalu menjadi orang tua di sekolah yang mengsupport kita dalam hal apapun, We Love Him. :3 </p>
+            </div>
+        </div>
+        <div id="funFact">Tahukah kamu? Kelas kita menghabiskan lebih dari 1000 jam bersama-sama selama 3 tahun!</div>
+        <button onclick="changeFunFact()">Ganti Fakta Menarik</button>
+
+        <div class="saran&masukan">
+            
+        </div>
+    </main>
+    <script>
+        const funFacts = [
+            "Tahukah kamu? Kelas kita menghabiskan lebih dari 1000 jam bersama-sama selama 3 tahun!",
+            "Fakta seru: Kita telah mengonsumsi lebih dari 500 bungkus snack selama belajar kelompok!",
+            "Wow! Jika dijumlahkan, kita telah menulis lebih dari 1 juta kata dalam buku catatan kita.",
+            "Unik! Kelas kita memecahkan rekor sekolah untuk 'Tawa Terbanyak dalam Satu Semester'.",
+            "Hebat! Rata-rata nilai kelas kita meningkat 15% dari awal hingga akhir tahun."
+        ];
+
+        function changeFunFact() {
+            const funFactElement = document.getElementById('funFact');
+            let newFact;
+            do {
+                newFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+            } while (newFact === funFactElement.textContent);
+            funFactElement.textContent = newFact;
+        }
+    </script>
+</body>
+</html>
